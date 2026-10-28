@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xác định Nhu cầu Nhân lực & Phương án Biên chế 2027-2031 | Trường THPT Phục Hòa</title>
+  <meta name="description" content="Hệ thống xác định nhu cầu nhân lực và xây dựng phương án, biên chế giai đoạn 2027-2031 của Trường THPT Phục Hòa theo Hướng dẫn số 07-HD/BTCTW của Ban Tổ chức Trung ương và Thông tư 20/2023/TT-BGDĐT.">
+  <meta name="keywords" content="VTVL, THPT Phục Hòa, Biên chế 2027-2031, Hướng dẫn 07-HD/BTCTW, Thông tư 20/2023/TT-BGDĐT, Cao Bằng">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome & Chart.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification Banner -->
+  <div class="top-banner">
+    <div class="top-banner-content">
+      <span class="top-banner-badge">CV SỞ GD&ĐT CAO BẰNG</span>
+      <span>Triển khai Kết luận 107-KL/TW và Hướng dẫn 07-HD/BTCTW của Ban Tổ chức Trung ương</span>
+    </div>
+    <div class="countdown-box" id="countdown-timer">
+      <i class="fa-regular fa-clock"></i>
+      <span>Đang tính thời gian nộp...</span>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-wrapper">
+        <div class="brand-logo-icon">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <div class="brand-info">
+          <h1>TRƯỜNG THPT PHỤC HÒA - SỞ GD&ĐT CAO BẰNG</h1>
+          <p>Hệ thống Xác định Nhu cầu Nhân lực & Phương án Biên chế Giai đoạn 2027 - 2031</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-excel" onclick="downloadFile('excel')" title="Tải trọn bộ 09 biểu mẫu Excel chuẩn">
+          <i class="fa-solid fa-file-excel"></i>
+          <span>Tải Bản Excel (.xlsx)</span>
+        </button>
+        <button class="btn btn-word" onclick="downloadFile('word')" title="Tải Tờ trình & Thuyết minh Đề án Word">
+          <i class="fa-solid fa-file-word"></i>
+          <span>Tải Bản Word (.docx)</span>
+        </button>
+        <button class="btn btn-outline" onclick="window.print()" title="In văn bản hoặc xuất PDF">
+          <i class="fa-solid fa-print"></i>
+          <span>In Đề Án</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-header">
+        <div class="hero-badge-row">
+          <span class="badge badge-navy"><i class="fa-solid fa-bookmark"></i> Hướng dẫn 07-HD/BTCTW</span>
+          <span class="badge badge-teal"><i class="fa-solid fa-file-lines"></i> Kết luận 107-KL/TW</span>
+          <span class="badge badge-green"><i class="fa-solid fa-scale-balanced"></i> Thông tư 20/2023/TT-BGDĐT</span>
+          <span class="badge badge-purple"><i class="fa-solid fa-shield-halved"></i> Vùng 1 Biên giới khó khăn</span>
+          <span class="badge badge-gold"><i class="fa-solid fa-check-double"></i> Chuẩn nộp: 30/10/2026</span>
+        </div>
+        <h2 class="hero-title">Đề Án Xác Định Nhu Cầu Nhân Lực & Xây Dựng Phương Án Biên Chế (2027 - 2031)</h2>
+        <p class="hero-subtitle">
+          Căn cứ Hướng dẫn số 07-HD/BTCTW của Ban Tổ chức Trung ương, Công văn số 12176/BNV-CCVC của Bộ Nội vụ và Công văn chỉ đạo ngày 27/10/2026 của Sở Giáo dục và Đào tạo tỉnh Cao Bằng.
+        </p>
+      </div>
+
+      <!-- Metric KPI Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-header">
+            <span class="kpi-label">Biên chế hiện có</span>
+            <div class="kpi-icon"><i class="fa-solid fa-users text-primary"></i></div>
+          </div>
+          <div class="kpi-value">35 <span style="font-size: 15px; font-weight: 500;">người</span></div>
+          <div class="kpi-subtext">33 Viên chức biên chế + 02 HĐ 111</div>
+        </div>
+
+        <div class="kpi-card kpi-teal">
+          <div class="kpi-header">
+            <span class="kpi-label">Quy mô trường lớp</span>
+            <div class="kpi-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          </div>
+          <div class="kpi-value">14 <i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i> 16 <span style="font-size: 15px; font-weight: 500;">lớp</span></div>
+          <div class="kpi-subtext">573 HS (hiện tại) <i class="fa-solid fa-arrow-right"></i> 650 HS (2031)</div>
+        </div>
+
+        <div class="kpi-card kpi-green">
+          <div class="kpi-header">
+            <span class="kpi-label">Tổng giờ ròng/năm</span>
+            <div class="kpi-icon"><i class="fa-solid fa-stopwatch"></i></div>
+          </div>
+          <div class="kpi-value">55.850 <span style="font-size: 15px; font-weight: 500;">giờ</span></div>
+          <div class="kpi-subtext">Đo thực tế 12 tháng (01/10/25 - 30/9/26)</div>
+        </div>
+
+        <div class="kpi-card kpi-purple">
+          <div class="kpi-header">
+            <span class="kpi-label">Lao động quy đổi (PP2)</span>
+            <div class="kpi-icon"><i class="fa-solid fa-calculator"></i></div>
+          </div>
+          <div class="kpi-value">37,99 <span style="font-size: 15px; font-weight: 500;">FTE</span></div>
+          <div class="kpi-subtext">Quỹ giờ 1.470h (GV) & 1.904h (Hành chính)</div>
+        </div>
+
+        <div class="kpi-card kpi-gold">
+          <div class="kpi-header">
+            <span class="kpi-label">Nhu cầu cần bố trí</span>
+            <div class="kpi-icon"><i class="fa-solid fa-user-check"></i></div>
+          </div>
+          <div class="kpi-value">37 <i class="fa-solid fa-arrow-right" style="font-size: 16px;"></i> 39 <span style="font-size: 15px; font-weight: 500;">người</span></div>
+          <div class="kpi-subtext"><span class="kpi-highlight">+2 GV</span> năm 2027 và <span class="kpi-highlight">+2 GV</span> năm 2029</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Navigation Tabs -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-tab active" data-tab="tab-overview">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Tổng Quan & Đề Án</span>
+      </div>
+      <div class="nav-tab" data-tab="tab-forms">
+        <i class="fa-solid fa-table-list"></i>
+        <span>09 Biểu Nghiệp Vụ Chuẩn HD 07</span>
+        <span class="nav-tab-badge">A1 - D2</span>
+      </div>
+      <div class="nav-tab" data-tab="tab-simulator">
+        <i class="fa-solid fa-sliders"></i>
+        <span>Mô Phỏng & Tính Toán Biên Chế</span>
+      </div>
+      <div class="nav-tab" data-tab="tab-legal">
+        <i class="fa-solid fa-book-bookmark"></i>
+        <span>Căn Cứ Pháp Lý & Chỉ Đạo</span>
+      </div>
+      <div class="nav-tab" data-tab="tab-downloads">
+        <i class="fa-solid fa-cloud-arrow-down"></i>
+        <span>Tải Về & Đồng Bộ (GitHub/Vercel)</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- ==============================================
+         TAB 1: TỔNG QUAN & BÁO CÁO ĐỀ ÁN
+         ============================================== -->
+    <div class="tab-pane active" id="tab-overview">
+      <div class="content-card">
+        <div class="card-title-row">
+          <div class="card-title-left">
+            <h2><i class="fa-solid fa-file-contract text-primary"></i> Tờ Trình & Thuyết Minh Đề Án THPT Phục Hòa</h2>
+            <p>Báo cáo trình Sở Giáo dục và Đào tạo tỉnh Cao Bằng phê duyệt theo quy định</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-sm btn-word" onclick="downloadFile('word')">
+              <i class="fa-solid fa-download"></i> Tải Đề án Word (.docx)
+            </button>
+            <button class="btn btn-sm btn-excel" onclick="downloadFile('excel')">
+              <i class="fa-solid fa-download"></i> Tải Bộ biểu Excel (.xlsx)
+            </button>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; margin-bottom: 24px;">
+          <div>
+            <h3 style="font-size: 16px; font-weight: 700; color: var(--primary-navy); margin-bottom: 12px;">
+              <i class="fa-solid fa-circle-info text-teal"></i> Tóm Tắt Tờ Trình Số 26/TTr-THPT
+            </h3>
+            <div style="background: var(--bg-card-subtle); padding: 18px; border-radius: var(--radius-lg); font-size: 14px; line-height: 1.7; border-left: 4px solid var(--primary-teal);">
+              <p><strong>Cơ quan trình:</strong> Trường THPT Phục Hòa - Tỉnh Cao Bằng</p>
+              <p><strong>Cơ quan nhận:</strong> Sở Giáo dục và Đào tạo tỉnh Cao Bằng</p>
+              <p><strong>Đặc thù đơn vị:</strong> Trường thuộc thị trấn Phục Hòa, huyện Quảng Hòa, khu vực xã biên giới, thuộc <strong>Vùng 1 (xã có điều kiện KT-XH đặc biệt khó khăn)</strong>. Quy mô năm học 2026-2027 có <strong>14 lớp với 573 học sinh</strong> (bình quân 41 HS/lớp).</p>
+              <p><strong>Chỉ tiêu biên chế hiện có:</strong> 35 người (33 viên chức biên chế + 02 Hợp đồng lao động Nghị định 111/2022/NĐ-CP).</p>
+              <p><strong>Kết quả xác định nhu cầu nhân lực:</strong></p>
+              <ul style="padding-left: 20px; margin: 6px 0;">
+                <li>Tổng quỹ giờ ròng toàn trường: <strong>55.850 giờ/năm</strong>.</li>
+                <li>Số lao động quy đổi theo PP2 (FTE): <strong>37,99 người</strong>.</li>
+                <li>Số người cần bố trí năm 2027: <strong>37 người</strong> (35 viên chức + 02 HĐ 111).</li>
+                <li>Số người cần bố trí năm 2029-2031 (khi trường đạt 16 lớp): <strong>39 người</strong> (37 viên chức + 02 HĐ 111).</li>
+              </ul>
+              <p><strong>Đề xuất:</strong> Đề nghị Sở GD&ĐT trình cấp có thẩm quyền phê duyệt phương án biên chế giai đoạn 2027-2031, bổ sung <strong>02 biên chế giáo viên</strong> năm 2027 và <strong>02 biên chế giáo viên</strong> năm 2029 để bảo đảm tỷ lệ giáo viên/lớp theo Thông tư 20/2023/TT-BGDĐT.</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size: 16px; font-weight: 700; color: var(--primary-navy); margin-bottom: 12px;">
+              <i class="fa-solid fa-chart-pie text-teal"></i> Cơ Cấu Nhân Lực Hiện Có (30/9/2026)
+            </h3>
+            <div style="height: 280px; position: relative;">
+              <canvas id="chart-staff-distribution"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-Year Quota Projection Chart -->
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 16px; font-weight: 700; color: var(--primary-navy); margin-bottom: 12px;">
+            <i class="fa-solid fa-chart-column text-teal"></i> Lộ Trình Phát Triển Quy Mô Lớp Học & Phương Án Biên Chế (2027 - 2031)
+          </h3>
+          <div style="height: 320px; position: relative; background: white; padding: 16px; border: 1px solid var(--border-light); border-radius: var(--radius-lg);">
+            <canvas id="chart-5year-forecast"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         TAB 2: 09 BIỂU NGHIỆP VỤ CHUẨN HD 07
+         ============================================== -->
+    <div class="tab-pane" id="tab-forms">
+      <div class="content-card">
+        <div class="card-title-row">
+          <div class="card-title-left">
+            <h2><i class="fa-solid fa-folder-open text-primary"></i> 09 Biểu Mẫu Nghiệp Vụ Chuẩn Hướng Dẫn 07-HD/BTCTW</h2>
+            <p>Dữ liệu chuẩn hóa theo kỳ thống kê 12 tháng (01/10/2025 - 30/9/2026) và hiện trạng chốt 30/9/2026</p>
+          </div>
+          <button class="btn btn-sm btn-excel" onclick="downloadFile('excel')">
+            <i class="fa-solid fa-file-excel"></i> Xuất Trọn Bộ Excel (.xlsx)
+          </button>
+        </div>
+
+        <!-- Sub Tabs Navigation -->
+        <div class="sub-tabs-wrapper">
+          <button class="sub-tab-btn active" data-subtab="sub-a1">1. A1_Nhiệm vụ</button>
+          <button class="sub-tab-btn" data-subtab="sub-a2">2. A2_Công việc & SP</button>
+          <button class="sub-tab-btn" data-subtab="sub-b1">3. B1_Khối lượng & Giờ</button>
+          <button class="sub-tab-btn" data-subtab="sub-b2">4. B2_Đổi mới & CĐS</button>
+          <button class="sub-tab-btn" data-subtab="sub-c1">5. C1_VTVL & Quỹ giờ</button>
+          <button class="sub-tab-btn" data-subtab="sub-c2">6. C2_Khung năng lực</button>
+          <button class="sub-tab-btn" data-subtab="sub-c3">7. C3_Nhu cầu nhân lực</button>
+          <button class="sub-tab-btn" data-subtab="sub-d1">8. D1_Nhân lực hiện có (35 người)</button>
+          <button class="sub-tab-btn" data-subtab="sub-d2">9. D2_Phương án 2027-2031</button>
+        </div>
+
+        <!-- ==================== SUB-PANE A1 ==================== -->
+        <div class="sub-pane active" id="sub-a1">
+          <div class="filter-bar">
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" class="search-input table-search-input" data-target-table="table-a1" placeholder="Tìm kiếm nhiệm vụ, căn cứ...">
+            </div>
+            <span class="badge badge-navy">Tổng số: 15 Nhiệm vụ toàn diện</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-a1">
+              <thead>
+                <tr>
+                  <th>Mã NV</th>
+                  <th>Tên nhiệm vụ</th>
+                  <th>Cơ quan thực hiện</th>
+                  <th>Căn cứ pháp lý</th>
+                  <th>Kỳ thống kê</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>NV.PH.01</strong></td>
+                  <td>Quản lý, điều hành toàn diện hoạt động của nhà trường</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Điều lệ trường trung học (Thông tư 32/2020/TT-BGDĐT)</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.02</strong></td>
+                  <td>Tổ chức giảng dạy các môn học theo Chương trình GDPT 2018</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Thông tư 32/2018/TT-BGDĐT, Thông tư 13/2022/TT-BGDĐT</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.03</strong></td>
+                  <td>Tổ chức hoạt động trải nghiệm, hướng nghiệp và GD địa phương</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Chương trình GDPT 2018 cấp THPT</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.04</strong></td>
+                  <td>Công tác chủ nhiệm lớp, tư vấn tâm lý học đường, hỗ trợ học sinh</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Thông tư 32/2020/TT-BGDĐT, Thông tư 20/2023/TT-BGDĐT</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.05</strong></td>
+                  <td>Bồi dưỡng học sinh giỏi văn hóa, nghiên cứu KHKT cấp tỉnh</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>CV hướng dẫn thi HSG của Sở GD&ĐT Cao Bằng</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.06</strong></td>
+                  <td>Kiểm tra, đánh giá định kỳ và ôn thi tốt nghiệp THPT</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Thông tư 22/2021/TT-BGDĐT, Quy chế thi tốt nghiệp THPT</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.07</strong></td>
+                  <td>Quản lý tổ chuyên môn, sinh hoạt chuyên môn theo nghiên cứu bài học</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>CV 5512/BGDĐT, Kế hoạch tổ Tự nhiên, Xã hội</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.08</strong></td>
+                  <td>Quản lý tài chính, kế toán ngân sách và tài sản công trường học</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Luật Ngân sách, Luật Kế toán, Nghị định 60/2021/NĐ-CP</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.09</strong></td>
+                  <td>Công tác văn thư, lưu trữ, tiếp nhận văn bản và hồ sơ điện tử</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Nghị định 30/2020/NĐ-CP về công tác văn thư</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.10</strong></td>
+                  <td>Quản lý phòng thí nghiệm, thực hành, thiết bị dạy học số và hóa chất</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT, Danh mục thiết bị tối thiểu</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.11</strong></td>
+                  <td>Quản lý thư viện trường học đạt chuẩn và phát triển văn hóa đọc</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Thông tư 16/2022/TT-BGDĐT tiêu chuẩn thư viện cơ sở GDPT</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.12</strong></td>
+                  <td>Chăm sóc sức khỏe ban đầu, y tế học đường, vệ sinh an toàn thực phẩm</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Thông tư liên tịch 13/2016/TTLT-BYT-BGDĐT, TT 20/2023</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.13</strong></td>
+                  <td>Quản trị CSDL ngành giáo dục, chuyển đổi số và cổng thông tin điện tử</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>QĐ 4725/QĐ-BGDĐT, Hướng dẫn CSDL ngành Bộ GD&ĐT</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.14</strong></td>
+                  <td>Bảo vệ an ninh trật tự trường học, an toàn phòng cháy chữa cháy</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Nghị định 111/2022/NĐ-CP, Quy chế an toàn trường học</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>NV.PH.15</strong></td>
+                  <td>Vệ sinh môi trường cảnh quan sư phạm trường học xanh sạch đẹp</td>
+                  <td>Trường THPT Phục Hòa</td>
+                  <td>Nghị định 111/2022/NĐ-CP, Phong trào trường học hạnh phúc</td>
+                  <td>2025-2026</td>
+                  <td><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> Tiếp tục thực hiện</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE A2 ==================== -->
+        <div class="sub-pane" id="sub-a2">
+          <div class="filter-bar">
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" class="search-input table-search-input" data-target-table="table-a2" placeholder="Tìm kiếm công việc, sản phẩm, VTVL...">
+            </div>
+            <span class="badge badge-teal">Phân rã sản phẩm đầu ra chuẩn HD 07</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-a2">
+              <thead>
+                <tr>
+                  <th>Mã CV</th>
+                  <th>Mã VTVL</th>
+                  <th>Tên công việc</th>
+                  <th>Sản phẩm đầu ra</th>
+                  <th>Đơn vị tính</th>
+                  <th>Yêu cầu chất lượng</th>
+                  <th>Căn cứ / Nguồn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CV.01.01</strong></td>
+                  <td>VTVL.QL.01</td>
+                  <td>Xây dựng Kế hoạch chiến lược phát triển nhà trường giai đoạn 2027-2031</td>
+                  <td>Kế hoạch chiến lược được phê duyệt</td>
+                  <td>Kế hoạch</td>
+                  <td>Đạt chuẩn, đúng định hướng phát triển tỉnh</td>
+                  <td>Nghị quyết Chi bộ, QĐ ban hành</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.01.02</strong></td>
+                  <td>VTVL.QL.01</td>
+                  <td>Quản lý tổ chức bộ máy, tuyển dụng, đào tạo, đánh giá viên chức</td>
+                  <td>Hồ sơ quy hoạch, đánh giá CBGVNV</td>
+                  <td>Bộ hồ sơ</td>
+                  <td>Đúng thẩm quyền, công bằng theo NĐ 232/2026</td>
+                  <td>Hồ sơ công tác cán bộ</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.01.03</strong></td>
+                  <td>VTVL.QL.02</td>
+                  <td>Xây dựng Kế hoạch giáo dục nhà trường, phân công CM và TKB</td>
+                  <td>Kế hoạch giáo dục năm học, TKB</td>
+                  <td>Bản KH</td>
+                  <td>Phù hợp CT GDPT 2018, bảo đảm số tiết chuẩn</td>
+                  <td>Kế hoạch dạy học, TKB các tuần</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.01</strong></td>
+                  <td>VTVL.GV.01</td>
+                  <td>Giảng dạy môn Ngữ văn cấp THPT (Lớp 10, 11, 12)</td>
+                  <td>Tiết dạy chuẩn kiến thức kỹ năng</td>
+                  <td>Tiết</td>
+                  <td>Đạt yêu cầu cần đạt của CT 2018, 100% giáo án chuẩn</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.02</strong></td>
+                  <td>VTVL.GV.02</td>
+                  <td>Giảng dạy môn Toán cấp THPT (Lớp 10, 11, 12)</td>
+                  <td>Tiết dạy môn Toán</td>
+                  <td>Tiết</td>
+                  <td>Bảo đảm tư duy logic, đúng chuẩn kiến thức</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.03</strong></td>
+                  <td>VTVL.GV.03</td>
+                  <td>Giảng dạy môn Tiếng Anh cấp THPT (Lớp 10, 11, 12)</td>
+                  <td>Tiết dạy Tiếng Anh</td>
+                  <td>Tiết</td>
+                  <td>Phát triển 4 kỹ năng ngôn ngữ cho HS vùng khó khăn</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.04</strong></td>
+                  <td>VTVL.GV.04</td>
+                  <td>Giảng dạy môn Lịch sử cấp THPT (Lớp 10, 11, 12)</td>
+                  <td>Tiết dạy Lịch sử</td>
+                  <td>Tiết</td>
+                  <td>Bảo đảm tính chính xác, giáo dục lòng yêu nước</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.05</strong></td>
+                  <td>VTVL.GV.05</td>
+                  <td>Giảng dạy môn Giáo dục thể chất cấp THPT</td>
+                  <td>Tiết dạy Thể chất</td>
+                  <td>Tiết</td>
+                  <td>An toàn, phát triển thể lực học sinh</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.06</strong></td>
+                  <td>VTVL.GV.06</td>
+                  <td>Giảng dạy môn Giáo dục quốc phòng và an ninh</td>
+                  <td>Tiết dạy GDQP-AN</td>
+                  <td>Tiết</td>
+                  <td>Đúng kỹ năng quân sự, pháp luật an ninh</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.07</strong></td>
+                  <td>VTVL.GV.07</td>
+                  <td>Giảng dạy môn Địa lí cấp THPT</td>
+                  <td>Tiết dạy Địa lí</td>
+                  <td>Tiết</td>
+                  <td>Đạt chuẩn CT 2018, ứng dụng bản đồ số</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.08</strong></td>
+                  <td>VTVL.GV.08</td>
+                  <td>Giảng dạy môn Giáo dục Kinh tế và Pháp luật</td>
+                  <td>Tiết dạy GDKT&PL</td>
+                  <td>Tiết</td>
+                  <td>Trực quan, gắn thực tiễn đời sống và pháp luật</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.09</strong></td>
+                  <td>VTVL.GV.09</td>
+                  <td>Giảng dạy môn Vật lí cấp THPT</td>
+                  <td>Tiết dạy Vật lí</td>
+                  <td>Tiết</td>
+                  <td>Kết hợp thực hành thí nghiệm đầy đủ</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.10</strong></td>
+                  <td>VTVL.GV.10</td>
+                  <td>Giảng dạy môn Hóa học cấp THPT</td>
+                  <td>Tiết dạy Hóa học</td>
+                  <td>Tiết</td>
+                  <td>An toàn hóa chất, đạt chuẩn kiến thức</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.11</strong></td>
+                  <td>VTVL.GV.11</td>
+                  <td>Giảng dạy môn Sinh học cấp THPT</td>
+                  <td>Tiết dạy Sinh học</td>
+                  <td>Tiết</td>
+                  <td>Trực quan sinh động, phát triển năng lực KHTN</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.12</strong></td>
+                  <td>VTVL.GV.12</td>
+                  <td>Giảng dạy môn Công nghệ (Công nghiệp & Nông nghiệp)</td>
+                  <td>Tiết dạy Công nghệ</td>
+                  <td>Tiết</td>
+                  <td>Ứng dụng kỹ thuật số, nông nghiệp CNC</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.13</strong></td>
+                  <td>VTVL.GV.13</td>
+                  <td>Giảng dạy môn Tin học cấp THPT (ICT & Khoa học máy tính)</td>
+                  <td>Tiết dạy Tin học</td>
+                  <td>Tiết</td>
+                  <td>Thực hành phòng máy 100%, nâng cao năng lực AI</td>
+                  <td>Phân công CM, Sổ đầu bài</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.08.01</strong></td>
+                  <td>VTVL.NV.01</td>
+                  <td>Lập dự toán, quản lý chi tiêu ngân sách và báo cáo tài chính</td>
+                  <td>Báo cáo tài chính quý, năm</td>
+                  <td>Bộ chứng từ</td>
+                  <td>Đúng Luật Ngân sách, không sai sót tài chính</td>
+                  <td>Sổ kế toán, phần mềm MISA</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.09.01</strong></td>
+                  <td>VTVL.NV.02</td>
+                  <td>Xử lý công văn đi/đến, quản lý con dấu và lưu trữ văn thư</td>
+                  <td>Văn bản xử lý trên iOffice</td>
+                  <td>Văn bản</td>
+                  <td>Kịp thời, chính xác, bảo mật theo quy định</td>
+                  <td>Sổ văn bản, iOffice</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.10.01</strong></td>
+                  <td>VTVL.NV.03</td>
+                  <td>Chuẩn bị thiết bị, hóa chất phục vụ tiết dạy thực hành</td>
+                  <td>Buổi thực hành có chuẩn bị đồ dùng</td>
+                  <td>Buổi</td>
+                  <td>An toàn tuyệt đối, đầy đủ đồ dùng thực hành</td>
+                  <td>Sổ mượn trả thiết bị</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.11.01</strong></td>
+                  <td>VTVL.NV.04</td>
+                  <td>Nghiệp vụ thư viện, quản lý SGK, phục vụ bạn đọc</td>
+                  <td>Lượt bạn đọc, đầu sách số hóa</td>
+                  <td>Lượt mượn</td>
+                  <td>Đạt chuẩn thư viện mức độ 1 trở lên</td>
+                  <td>Phần mềm thư viện trường học</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.12.01</strong></td>
+                  <td>VTVL.NV.05</td>
+                  <td>Quản lý tủ thuốc, sơ cấp cứu, khám sức khỏe học sinh</td>
+                  <td>Hồ sơ y tế học đường</td>
+                  <td>Hồ sơ</td>
+                  <td>Đúng phác đồ cấp cứu, kiểm tra VSATTP</td>
+                  <td>Sổ theo dõi khám sức khỏe</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.14.01</strong></td>
+                  <td>VTVL.HD.01</td>
+                  <td>Bảo vệ an ninh trật tự, tuần tra, trực cổng trường 24/24</td>
+                  <td>Ca trực an toàn</td>
+                  <td>Ca</td>
+                  <td>Không xảy ra mất mát tài sản, an toàn trường học</td>
+                  <td>Sổ trực bảo vệ</td>
+                </tr>
+                <tr>
+                  <td><strong>CV.15.01</strong></td>
+                  <td>VTVL.HD.02</td>
+                  <td>Vệ sinh khu công cộng, sân trường, nhà vệ sinh</td>
+                  <td>Khuôn viên sạch sẽ</td>
+                  <td>Ngày công</td>
+                  <td>Đảm bảo trường học Sáng - Xanh - Sạch - Đẹp</td>
+                  <td>Nghiệm thu lao động</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE B1 ==================== -->
+        <div class="sub-pane" id="sub-b1">
+          <div class="filter-bar">
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" class="search-input table-search-input" data-target-table="table-b1" placeholder="Tìm kiếm công việc...">
+            </div>
+            <span class="badge badge-green">Tổng hợp quỹ giờ thực tế 12 tháng</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-b1">
+              <thead>
+                <tr>
+                  <th>Mã CV</th>
+                  <th>Mã VTVL</th>
+                  <th style="text-align: right;">Số SP/năm</th>
+                  <th style="text-align: right;">Phút/SP</th>
+                  <th style="text-align: right;">Giờ bổ sung</th>
+                  <th style="text-align: right;">Giờ SP</th>
+                  <th style="text-align: right;">Tổng giờ</th>
+                  <th>Nguồn căn cứ thời gian</th>
+                  <th>Cảnh báo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CV.01.01</strong></td>
+                  <td>VTVL.QL.01</td>
+                  <td style="text-align: right;">1</td>
+                  <td style="text-align: right;">12.000</td>
+                  <td style="text-align: right;">200</td>
+                  <td style="text-align: right;">200.0</td>
+                  <td style="text-align: right;"><strong>400.0</strong></td>
+                  <td>Nghị định 232/2026/NĐ-CP</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.01.02</strong></td>
+                  <td>VTVL.QL.01</td>
+                  <td style="text-align: right;">12</td>
+                  <td style="text-align: right;">4.800</td>
+                  <td style="text-align: right;">500</td>
+                  <td style="text-align: right;">960.0</td>
+                  <td style="text-align: right;"><strong>1.460.0</strong></td>
+                  <td>Thông tư 32/2020/TT-BGDĐT</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.01.03</strong></td>
+                  <td>VTVL.QL.02</td>
+                  <td style="text-align: right;">35</td>
+                  <td style="text-align: right;">1.800</td>
+                  <td style="text-align: right;">400</td>
+                  <td style="text-align: right;">1.050.0</td>
+                  <td style="text-align: right;"><strong>1.450.0</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.01</strong></td>
+                  <td>VTVL.GV.01</td>
+                  <td style="text-align: right;">1.750</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">1.200</td>
+                  <td style="text-align: right;">1.312.5</td>
+                  <td style="text-align: right;"><strong>2.512.5</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Ngữ văn)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.02</strong></td>
+                  <td>VTVL.GV.02</td>
+                  <td style="text-align: right;">1.750</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">1.200</td>
+                  <td style="text-align: right;">1.312.5</td>
+                  <td style="text-align: right;"><strong>2.512.5</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Toán)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.03</strong></td>
+                  <td>VTVL.GV.03</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">950</td>
+                  <td style="text-align: right;">1.102.5</td>
+                  <td style="text-align: right;"><strong>2.052.5</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Tiếng Anh)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.04</strong></td>
+                  <td>VTVL.GV.04</td>
+                  <td style="text-align: right;">980</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">700</td>
+                  <td style="text-align: right;">735.0</td>
+                  <td style="text-align: right;"><strong>1.435.0</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Lịch sử)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.05</strong></td>
+                  <td>VTVL.GV.05</td>
+                  <td style="text-align: right;">980</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">700</td>
+                  <td style="text-align: right;">735.0</td>
+                  <td style="text-align: right;"><strong>1.435.0</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (GDTC)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.06</strong></td>
+                  <td>VTVL.GV.06</td>
+                  <td style="text-align: right;">490</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">400</td>
+                  <td style="text-align: right;">367.5</td>
+                  <td style="text-align: right;"><strong>767.5</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (GDQP-AN)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.12</strong></td>
+                  <td>VTVL.GV.12</td>
+                  <td style="text-align: right;">980</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">700</td>
+                  <td style="text-align: right;">735.0</td>
+                  <td style="text-align: right;"><strong>1.435.0</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Công nghệ)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.02.13</strong></td>
+                  <td>VTVL.GV.13</td>
+                  <td style="text-align: right;">490</td>
+                  <td style="text-align: right;">45</td>
+                  <td style="text-align: right;">400</td>
+                  <td style="text-align: right;">367.5</td>
+                  <td style="text-align: right;"><strong>767.5</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Tin học)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.08.01</strong></td>
+                  <td>VTVL.NV.01</td>
+                  <td style="text-align: right;">180</td>
+                  <td style="text-align: right;">480</td>
+                  <td style="text-align: right;">400</td>
+                  <td style="text-align: right;">1.440.0</td>
+                  <td style="text-align: right;"><strong>1.840.0</strong></td>
+                  <td>Luật Kế toán, Nghị định 60/2021</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.09.01</strong></td>
+                  <td>VTVL.NV.02</td>
+                  <td style="text-align: right;">2.150</td>
+                  <td style="text-align: right;">35</td>
+                  <td style="text-align: right;">350</td>
+                  <td style="text-align: right;">1.254.2</td>
+                  <td style="text-align: right;"><strong>1.604.2</strong></td>
+                  <td>Nghị định 30/2020/NĐ-CP</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.10.01</strong></td>
+                  <td>VTVL.NV.03</td>
+                  <td style="text-align: right;">560</td>
+                  <td style="text-align: right;">120</td>
+                  <td style="text-align: right;">450</td>
+                  <td style="text-align: right;">1.120.0</td>
+                  <td style="text-align: right;"><strong>1.570.0</strong></td>
+                  <td>Thông tư 20/2023/TT-BGDĐT</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CV.11.01</strong></td>
+                  <td>VTVL.NV.04</td>
+                  <td style="text-align: right;">1.250</td>
+                  <td style="text-align: right;">60</td>
+                  <td style="text-align: right;">400</td>
+                  <td style="text-align: right;">1.250.0</td>
+                  <td style="text-align: right;"><strong>1.650.0</strong></td>
+                  <td>Thông tư 16/2022/TT-BGDĐT</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE B2 ==================== -->
+        <div class="sub-pane" id="sub-b2">
+          <div class="filter-bar">
+            <span class="badge badge-purple">Tác động chuyển đổi số và công nghệ</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-b2">
+              <thead>
+                <tr>
+                  <th>Mã VTVL</th>
+                  <th>Tên VTVL</th>
+                  <th>Nội dung chuyển đổi số / công nghệ</th>
+                  <th style="text-align: right;">Giờ giảm do tự động</th>
+                  <th style="text-align: right;">Giờ mới phát sinh</th>
+                  <th style="text-align: right;">Giờ tác động ròng</th>
+                  <th>Giải trình căn cứ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>VTVL.QL.01</strong></td>
+                  <td>Hiệu trưởng</td>
+                  <td>Chữ ký số cá nhân, điều hành qua iOffice, quản lý CSDL ngành</td>
+                  <td style="text-align: right; color:#ef4444;">-120</td>
+                  <td style="text-align: right; color:#059669;">+40</td>
+                  <td style="text-align: right; font-weight:700;">-80</td>
+                  <td>Giảm ký giấy tờ thủ công, tăng nhiệm vụ bảo mật và xác thực số</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.QL.02</strong></td>
+                  <td>Phó Hiệu trưởng</td>
+                  <td>Phần mềm xếp TKB tự động, quản lý điểm và học bạ điện tử vnEdu</td>
+                  <td style="text-align: right; color:#ef4444;">-150</td>
+                  <td style="text-align: right; color:#059669;">+60</td>
+                  <td style="text-align: right; font-weight:700;">-90</td>
+                  <td>Tự động hóa kiểm dò điểm, tăng nhiệm vụ thẩm định kho học liệu số</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.01</strong></td>
+                  <td>Giáo viên Ngữ văn</td>
+                  <td>Giáo án số hóa, chấm bài kiểm tra định kỳ trên phần mềm LMS</td>
+                  <td style="text-align: right; color:#ef4444;">-80</td>
+                  <td style="text-align: right; color:#059669;">+50</td>
+                  <td style="text-align: right; font-weight:700;">-30</td>
+                  <td>Không in ấn hồ sơ giấy, tập trung phân hóa năng lực học sinh</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.02</strong></td>
+                  <td>Giáo viên Toán</td>
+                  <td>Ngân hàng đề thi trắc nghiệm, phần mềm hình học động Geogebra</td>
+                  <td style="text-align: right; color:#ef4444;">-90</td>
+                  <td style="text-align: right; color:#059669;">+40</td>
+                  <td style="text-align: right; font-weight:700;">-50</td>
+                  <td>Rút ngắn thời gian ra đề trắc nghiệm, chuẩn hóa ma trận đặc tả</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.13</strong></td>
+                  <td>Giáo viên Tin học</td>
+                  <td>Quản trị CSDL ngành, hạ tầng mạng, website và đào tạo năng lực số AI</td>
+                  <td style="text-align: right; color:#ef4444;">-50</td>
+                  <td style="text-align: right; color:#059669;">+150</td>
+                  <td style="text-align: right; font-weight:700; color:#059669;">+100</td>
+                  <td>Phát sinh khối lượng quản trị dữ liệu số toàn trường và an toàn mạng</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.01</strong></td>
+                  <td>Kế toán</td>
+                  <td>Phần mềm MISA, thanh toán học phí không dùng tiền mặt, hóa đơn điện tử</td>
+                  <td style="text-align: right; color:#ef4444;">-160</td>
+                  <td style="text-align: right; color:#059669;">+40</td>
+                  <td style="text-align: right; font-weight:700;">-120</td>
+                  <td>Tự động hóa đối soát ngân hàng, giảm thu tiền mặt trực tiếp</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.02</strong></td>
+                  <td>Văn thư</td>
+                  <td>Hệ thống quản lý văn bản điều hành iOffice tỉnh Cao Bằng</td>
+                  <td style="text-align: right; color:#ef4444;">-140</td>
+                  <td style="text-align: right; color:#059669;">+30</td>
+                  <td style="text-align: right; font-weight:700;">-110</td>
+                  <td>95% văn bản luân chuyển trên mạng, không in sao giấy tờ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE C1 ==================== -->
+        <div class="sub-pane" id="sub-c1">
+          <div class="filter-bar">
+            <span class="badge badge-navy">22 Vị trí việc làm & Quỹ thời gian quy đổi chuẩn</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-c1">
+              <thead>
+                <tr>
+                  <th>Mã VTVL</th>
+                  <th>Tên VTVL</th>
+                  <th>Loại nhân lực</th>
+                  <th style="text-align: right;">Giờ chuẩn PP2</th>
+                  <th>Căn cứ xác định quỹ giờ</th>
+                  <th>Chế độ làm việc</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>VTVL.QL.01</strong></td>
+                  <td>Hiệu trưởng</td>
+                  <td>Viên chức quản lý</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Hướng dẫn 07-HD/BTCTW (238 ngày x 8h)</td>
+                  <td>40 giờ/tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.QL.02</strong></td>
+                  <td>Phó Hiệu trưởng</td>
+                  <td>Viên chức quản lý</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Hướng dẫn 07-HD/BTCTW</td>
+                  <td>40 giờ/tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.01</strong></td>
+                  <td>Giáo viên Ngữ văn</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.02</strong></td>
+                  <td>Giáo viên Toán</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.03</strong></td>
+                  <td>Giáo viên Tiếng Anh</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.04</strong></td>
+                  <td>Giáo viên Lịch sử</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.05</strong></td>
+                  <td>Giáo viên Giáo dục thể chất</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.06</strong></td>
+                  <td>Giáo viên GDQP-AN</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.07</strong></td>
+                  <td>Giáo viên Địa lí</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.08</strong></td>
+                  <td>Giáo viên GDKT & PL</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.09</strong></td>
+                  <td>Giáo viên Vật lí</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.10</strong></td>
+                  <td>Giáo viên Hóa học</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.11</strong></td>
+                  <td>Giáo viên Sinh học</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.12</strong></td>
+                  <td>Giáo viên Công nghệ</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.13</strong></td>
+                  <td>Giáo viên Tin học</td>
+                  <td>Viên chức chuyên môn</td>
+                  <td style="text-align: right; font-weight:700;">1.470</td>
+                  <td>Thông tư 20/2023/TT-BGDĐT (Chế độ 42 tuần)</td>
+                  <td>35 tuần dạy + 7 tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.01</strong></td>
+                  <td>Kế toán</td>
+                  <td>Viên chức hỗ trợ, phục vụ</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Hướng dẫn 07-HD/BTCTW</td>
+                  <td>40 giờ/tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.02</strong></td>
+                  <td>Văn thư</td>
+                  <td>Viên chức hỗ trợ, phục vụ</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Hướng dẫn 07-HD/BTCTW</td>
+                  <td>40 giờ/tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.03</strong></td>
+                  <td>Thiết bị, thí nghiệm</td>
+                  <td>Viên chức hỗ trợ, phục vụ</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Hướng dẫn 07-HD/BTCTW</td>
+                  <td>40 giờ/tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.04</strong></td>
+                  <td>Thư viện viên</td>
+                  <td>Viên chức hỗ trợ, phục vụ</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Hướng dẫn 07-HD/BTCTW</td>
+                  <td>40 giờ/tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.05</strong></td>
+                  <td>Y tế trường học</td>
+                  <td>Viên chức hỗ trợ, phục vụ</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Hướng dẫn 07-HD/BTCTW</td>
+                  <td>40 giờ/tuần</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục sử dụng</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.HD.01</strong></td>
+                  <td>Bảo vệ</td>
+                  <td>HĐ theo NĐ 111/2022</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Nghị định 111/2022/NĐ-CP</td>
+                  <td>Theo ca trực 24/24</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục thực hiện</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.HD.02</strong></td>
+                  <td>Phục vụ / Tạp vụ</td>
+                  <td>HĐ theo NĐ 111/2022</td>
+                  <td style="text-align: right; font-weight:700;">1.904</td>
+                  <td>Nghị định 111/2022/NĐ-CP</td>
+                  <td>Giờ hành chính</td>
+                  <td><span class="badge-status badge-dat">Tiếp tục thực hiện</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE C2 ==================== -->
+        <div class="sub-pane" id="sub-c2">
+          <div class="filter-bar">
+            <span class="badge badge-teal">Khung năng lực và yêu cầu trình độ</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-c2">
+              <thead>
+                <tr>
+                  <th>Mã VTVL</th>
+                  <th>Tên VTVL</th>
+                  <th>Trình độ chuyên môn tối thiểu</th>
+                  <th>Yêu cầu chứng chỉ / Bồi dưỡng</th>
+                  <th>Năng lực số / Ngoại ngữ</th>
+                  <th>Chuẩn nghề nghiệp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>VTVL.QL.01</strong></td>
+                  <td>Hiệu trưởng</td>
+                  <td>Thạc sĩ / Cử nhân SP trở lên</td>
+                  <td>QLGD, Trung cấp LLCT trở lên</td>
+                  <td>Ứng dụng CNTT cơ bản, Ngoại ngữ bậc 3</td>
+                  <td>Đạt chuẩn Hiệu trưởng loại Tốt</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.QL.02</strong></td>
+                  <td>Phó Hiệu trưởng</td>
+                  <td>Đại học Sư phạm trở lên</td>
+                  <td>QLGD, Trung cấp LLCT</td>
+                  <td>Ứng dụng CNTT cơ bản, Ngoại ngữ bậc 3</td>
+                  <td>Đạt chuẩn PHT loại Khá trở lên</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.01 - 13</strong></td>
+                  <td>Giáo viên THPT các môn</td>
+                  <td>Cử nhân SP đúng chuyên ngành</td>
+                  <td>Chứng chỉ CDNN GV THPT (Hạng II, III)</td>
+                  <td>Ứng dụng CNTT trong dạy học, CĐS, AI</td>
+                  <td>Đạt chuẩn nghề nghiệp giáo viên</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.01</strong></td>
+                  <td>Kế toán</td>
+                  <td>Đại học Tài chính / Kế toán</td>
+                  <td>Chứng chỉ Kế toán trưởng đơn vị SNCL</td>
+                  <td>Phần mềm MISA, DVC Kho bạc nhà nước</td>
+                  <td>Hoàn thành tốt nhiệm vụ</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.02</strong></td>
+                  <td>Văn thư</td>
+                  <td>Cao đẳng trở lên ngành Văn thư</td>
+                  <td>Bồi dưỡng nghiệp vụ văn thư lưu trữ</td>
+                  <td>Hệ thống iOffice, chữ ký số điện tử</td>
+                  <td>Hoàn thành tốt nhiệm vụ</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.03</strong></td>
+                  <td>Thiết bị, thí nghiệm</td>
+                  <td>Cao đẳng trở lên ngành kỹ thuật/SP</td>
+                  <td>Bồi dưỡng nghiệp vụ thiết bị trường học</td>
+                  <td>Quản lý tài sản số, an toàn PTN</td>
+                  <td>Hoàn thành tốt nhiệm vụ</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.04</strong></td>
+                  <td>Thư viện viên</td>
+                  <td>Đại học ngành Thư viện - Thông tin</td>
+                  <td>Nghiệp vụ thư viện trường phổ thông</td>
+                  <td>Phần mềm thư viện số, CSDL sách</td>
+                  <td>Hoàn thành tốt nhiệm vụ</td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.05</strong></td>
+                  <td>Y tế trường học</td>
+                  <td>Cao đẳng Y tế / Y sĩ đa khoa</td>
+                  <td>Chứng chỉ hành nghề y tế / y tế học đường</td>
+                  <td>Quản lý hồ sơ sức khỏe điện tử</td>
+                  <td>Hoàn thành tốt nhiệm vụ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE C3 ==================== -->
+        <div class="sub-pane" id="sub-c3">
+          <div class="filter-bar">
+            <span class="badge badge-gold">Đối chiếu 3 Phương pháp PP1, PP2, PP3 theo Hướng dẫn 07</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-c3">
+              <thead>
+                <tr>
+                  <th>Mã VTVL</th>
+                  <th>Tên VTVL</th>
+                  <th style="text-align: right;">Giờ ròng</th>
+                  <th style="text-align: right;">Giờ chuẩn</th>
+                  <th style="text-align: right;">Quy đổi PP2</th>
+                  <th style="text-align: right;">PP1 (Định mức)</th>
+                  <th style="text-align: right; background: #e0f2fe;">Người cần bố trí</th>
+                  <th>Căn cứ & Giải trình khoa học</th>
+                  <th>Cảnh báo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>VTVL.QL.01</strong></td>
+                  <td>Hiệu trưởng</td>
+                  <td style="text-align: right;">1.780.0</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td style="text-align: right;">0.93</td>
+                  <td style="text-align: right;">1.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">1.0</td>
+                  <td>Định mức trường hạng II: 01 Hiệu trưởng theo Thông tư 20/2023</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.QL.02</strong></td>
+                  <td>Phó Hiệu trưởng</td>
+                  <td style="text-align: right;">2.620.0</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td style="text-align: right;">1.38</td>
+                  <td style="text-align: right;">2.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">2.0</td>
+                  <td>Quy mô 14 lớp (từ 10-17 lớp được bố trí tối đa 02 PHT)</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.01</strong></td>
+                  <td>Giáo viên Ngữ văn</td>
+                  <td style="text-align: right;">2.482.5</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">1.69</td>
+                  <td style="text-align: right;">3.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">3.0</td>
+                  <td>35 tiết/tuần chia cho 14 lớp. Cần 3 GV để đảm bảo dạy và ôn thi TN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.02</strong></td>
+                  <td>Giáo viên Toán</td>
+                  <td style="text-align: right;">2.462.5</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">1.68</td>
+                  <td style="text-align: right;">3.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">3.0</td>
+                  <td>Môn cốt lõi thi tốt nghiệp, 35 tiết/tuần. Bố trí 3 GV</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.03</strong></td>
+                  <td>Giáo viên Tiếng Anh</td>
+                  <td style="text-align: right;">2.032.5</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">1.38</td>
+                  <td style="text-align: right;">2.5</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">3.0</td>
+                  <td>Vùng biên giới cần tăng cường bồi dưỡng ngoại ngữ, bố trí 3 GV</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.04</strong></td>
+                  <td>Giáo viên Lịch sử</td>
+                  <td style="text-align: right;">1.435.0</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.98</td>
+                  <td style="text-align: right;">2.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">2.0</td>
+                  <td>Môn bắt buộc GDPT 2018, kiêm nhiệm HĐ trải nghiệm, bố trí 2 GV</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.05</strong></td>
+                  <td>Giáo viên Giáo dục thể chất</td>
+                  <td style="text-align: right;">1.435.0</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.98</td>
+                  <td style="text-align: right;">2.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">2.0</td>
+                  <td>28 tiết/tuần + hoạt động HKPĐ, rèn luyện thể lực</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.06</strong></td>
+                  <td>Giáo viên GDQP-AN</td>
+                  <td style="text-align: right;">767.5</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.52</td>
+                  <td style="text-align: right;">1.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">1.0</td>
+                  <td>Đặc thù môn chuyên biệt, kiêm nhiệm công tác an ninh, bố trí 1 GV</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.07</strong></td>
+                  <td>Giáo viên Địa lí</td>
+                  <td style="text-align: right;">1.435.0</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.98</td>
+                  <td style="text-align: right;">2.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">2.0</td>
+                  <td>Môn lựa chọn tổ hợp KHXH, bố trí 2 GV dạy 14 lớp</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.08</strong></td>
+                  <td>Giáo viên GDKT & PL</td>
+                  <td style="text-align: right;">767.5</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.52</td>
+                  <td style="text-align: right;">1.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">1.0</td>
+                  <td>Môn lựa chọn tổ hợp KHXH, kiêm nhiệm tư vấn pháp luật, bố trí 1 GV</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.09</strong></td>
+                  <td>Giáo viên Vật lí</td>
+                  <td style="text-align: right;">891.0</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.61</td>
+                  <td style="text-align: right;">1.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">1.0</td>
+                  <td>Môn KHTN, bố trí 1 GV giảng dạy kiêm phòng thí nghiệm Lý</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.10</strong></td>
+                  <td>Giáo viên Hóa học</td>
+                  <td style="text-align: right;">891.0</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.61</td>
+                  <td style="text-align: right;">1.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">1.0</td>
+                  <td>Môn KHTN, bố trí 1 GV phụ trách kiêm phòng thí nghiệm Hóa</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.11</strong></td>
+                  <td>Giáo viên Sinh học</td>
+                  <td style="text-align: right;">891.0</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.61</td>
+                  <td style="text-align: right;">1.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">1.0</td>
+                  <td>Môn KHTN, bố trí 1 GV phụ trách kiêm phòng thí nghiệm Sinh</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.12</strong></td>
+                  <td>Giáo viên Công nghệ</td>
+                  <td style="text-align: right;">1.435.0</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.98</td>
+                  <td style="text-align: right;">2.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">2.0</td>
+                  <td>Gồm CN Công nghiệp và CN Nông nghiệp, bố trí 2 GV</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV.13</strong></td>
+                  <td>Giáo viên Tin học</td>
+                  <td style="text-align: right;">867.5</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td style="text-align: right;">0.59</td>
+                  <td style="text-align: right;">1.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">1.0</td>
+                  <td>Dạy 14 lớp + phụ trách CĐS, website, CSDL ngành, bố trí 1 GV</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV.01-05</strong></td>
+                  <td>Nhân viên hỗ trợ, phục vụ (5 VTVL)</td>
+                  <td style="text-align: right;">7.893.7</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td style="text-align: right;">4.15</td>
+                  <td style="text-align: right;">6.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">6.0</td>
+                  <td>Bố trí KT, VT, TBTN, TV, YT, GVU theo Thông tư 20/2023/TT-BGDĐT</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.HD.01-02</strong></td>
+                  <td>Hợp đồng lao động NĐ 111 (2 VTVL)</td>
+                  <td style="text-align: right;">4.590.0</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td style="text-align: right;">2.41</td>
+                  <td style="text-align: right;">2.0</td>
+                  <td style="text-align: right; font-weight:800; background: #e0f2fe;">2.0</td>
+                  <td>Bảo vệ an ninh trường học và Phục vụ tạp vụ vệ sinh</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2"><strong>TỔNG CỘNG TOÀN TRƯỜNG</strong></td>
+                  <td style="text-align: right;"><strong>55.850.0</strong></td>
+                  <td>-</td>
+                  <td style="text-align: right;"><strong>37,99</strong></td>
+                  <td style="text-align: right;"><strong>36,0</strong></td>
+                  <td style="text-align: right; background: #dcfce7; font-size: 15px;"><strong>37,0</strong></td>
+                  <td colspan="2"><span class="badge-status badge-dat"><i class="fa-solid fa-check"></i> ĐẠT ĐIỀU KIỆN THẨM ĐỊNH</span></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE D1 ==================== -->
+        <div class="sub-pane" id="sub-d1">
+          <div class="filter-bar">
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" class="search-input table-search-input" data-target-table="table-d1" placeholder="Tìm kiếm họ tên, môn dạy, trình độ...">
+            </div>
+            <span class="badge badge-navy">Danh sách 35 CB-GV-NV chốt ngày 30/9/2026</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-d1">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Mã NL</th>
+                  <th>Họ và tên</th>
+                  <th>Năm sinh</th>
+                  <th>Dân tộc</th>
+                  <th>Chức vụ / Vị trí việc làm</th>
+                  <th>Trình độ chuyên môn</th>
+                  <th>Bậc ngạch</th>
+                  <th>Giờ phân bổ/năm</th>
+                  <th>Nhiệm vụ kiêm nhiệm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-highlight">
+                  <td>1</td>
+                  <td>NL.PH.01</td>
+                  <td><strong>Hoàng Trung Kiên</strong></td>
+                  <td>1980</td>
+                  <td>Tày</td>
+                  <td>Hiệu trưởng</td>
+                  <td>Thạc sĩ Quản lý GD</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Bí thư Chi bộ, lãnh đạo toàn diện</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>2</td>
+                  <td>NL.PH.02</td>
+                  <td><strong>Đinh Thị Toan</strong></td>
+                  <td>1982</td>
+                  <td>Tày</td>
+                  <td>Phó Hiệu trưởng</td>
+                  <td>Đại học Sư phạm</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Phụ trách công tác chuyên môn</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>3</td>
+                  <td>NL.PH.03</td>
+                  <td><strong>Phan Văn Thế</strong></td>
+                  <td>1985</td>
+                  <td>Tày</td>
+                  <td>Phó Hiệu trưởng</td>
+                  <td>Đại học Sư phạm</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Phụ trách CSVC, nề nếp học sinh</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>NL.PH.04</td>
+                  <td><strong>Nông Thị Bích Hảo</strong></td>
+                  <td>1976</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Tiếng Anh</td>
+                  <td>Đại học SP Tiếng Anh</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Tổ trưởng Tổ Xã hội</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>NL.PH.05</td>
+                  <td><strong>Trương Thị Duyên</strong></td>
+                  <td>1976</td>
+                  <td>Nùng</td>
+                  <td>Giáo viên Toán</td>
+                  <td>Đại học SP Toán</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Tổ phó Tổ Tự nhiên</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>NL.PH.06</td>
+                  <td><strong>Hoàng Thị Huệ</strong></td>
+                  <td>1974</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Lịch sử</td>
+                  <td>Đại học SP Lịch sử</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>NL.PH.07</td>
+                  <td><strong>Đàm Thị Thanh Hà</strong></td>
+                  <td>1978</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Vật lí</td>
+                  <td>Đại học SP Vật lí</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>NL.PH.08</td>
+                  <td><strong>Ngọc Bích Diệp</strong></td>
+                  <td>1978</td>
+                  <td>Nùng</td>
+                  <td>Giáo viên Ngữ văn</td>
+                  <td>Đại học SP Ngữ văn</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>NL.PH.09</td>
+                  <td><strong>Nông Thị Đông</strong></td>
+                  <td>1980</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Tiếng Anh</td>
+                  <td>Đại học SP Tiếng Anh</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>NL.PH.10</td>
+                  <td><strong>Nông Hoài Thu</strong></td>
+                  <td>1982</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Ngữ văn</td>
+                  <td>Đại học SP Ngữ văn</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr style="background:#eff6ff;">
+                  <td>11</td>
+                  <td>NL.PH.11</td>
+                  <td><strong>Lê Tuấn Vương</strong></td>
+                  <td>1981</td>
+                  <td>Kinh</td>
+                  <td>Giáo viên Công nghệ (KTNN)</td>
+                  <td>Đại học Sư phạm</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Phụ trách thiết bị CN, GVCN</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>NL.PH.12</td>
+                  <td><strong>Hoàng Minh Tuấn</strong></td>
+                  <td>1981</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Hóa học</td>
+                  <td>Đại học SP Hóa học</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Tổ trưởng Tổ Tự nhiên</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>NL.PH.13</td>
+                  <td><strong>Dương Minh Toản</strong></td>
+                  <td>1982</td>
+                  <td>Kinh</td>
+                  <td>Giáo viên Giáo dục thể chất</td>
+                  <td>Đại học SP Thể chất</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Chủ tịch Công đoàn nhà trường</td>
+                </tr>
+                <tr style="background:#eff6ff;">
+                  <td>14</td>
+                  <td>NL.PH.14</td>
+                  <td><strong>Đàm Thị Hợp</strong></td>
+                  <td>1986</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Tin học</td>
+                  <td>Đại học SP Tin học</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Phụ trách CNTT, CĐS, GVCN</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>NL.PH.15</td>
+                  <td><strong>Phạm Viết Biên</strong></td>
+                  <td>1984</td>
+                  <td>Mường</td>
+                  <td>Giáo viên Toán</td>
+                  <td>Đại học SP Toán</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Bồi dưỡng HSG Toán</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>NL.PH.16</td>
+                  <td><strong>Nông Văn Chiến</strong></td>
+                  <td>1990</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Toán</td>
+                  <td>Đại học SP Toán</td>
+                  <td>Bậc 2</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Bí thư Đoàn trường</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>NL.PH.17</td>
+                  <td><strong>Ma Đức Thiện</strong></td>
+                  <td>1994</td>
+                  <td>Tày</td>
+                  <td>Giáo viên GDKT & PL</td>
+                  <td>Đại học Sư phạm</td>
+                  <td>Bậc 2</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>NL.PH.18</td>
+                  <td><strong>Đinh Tố Loan</strong></td>
+                  <td>1982</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Tiếng Anh</td>
+                  <td>Đại học SP Tiếng Anh</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>NL.PH.19</td>
+                  <td><strong>Nông Văn Đình</strong></td>
+                  <td>1981</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Giáo dục thể chất</td>
+                  <td>Đại học SP Thể chất</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Huấn luyện HKPĐ cấp tỉnh</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>NL.PH.20</td>
+                  <td><strong>Hoàng Thị Thùy Dung</strong></td>
+                  <td>1986</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Công nghệ (KTCN)</td>
+                  <td>Đại học Sư phạm</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>NL.PH.21</td>
+                  <td><strong>Ngọc Hữu Nghị</strong></td>
+                  <td>1983</td>
+                  <td>Nùng</td>
+                  <td>Giáo viên Toán</td>
+                  <td>Đại học SP Toán</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>NL.PH.22</td>
+                  <td><strong>Nông Quốc Tuệ</strong></td>
+                  <td>1970</td>
+                  <td>Tày</td>
+                  <td>Giáo viên GDQP-AN</td>
+                  <td>Đại học Sư phạm</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Phụ trách phòng đồ dùng GDQP</td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td>NL.PH.23</td>
+                  <td><strong>Nguyễn Văn Sắc</strong></td>
+                  <td>1983</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Địa lí</td>
+                  <td>Đại học SP Địa lí</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>NL.PH.24</td>
+                  <td><strong>Đoàn Bích Liên</strong></td>
+                  <td>1984</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Ngữ văn</td>
+                  <td>Đại học SP Ngữ văn</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>NL.PH.25</td>
+                  <td><strong>Đàm Thị Quyên</strong></td>
+                  <td>1973</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Lịch sử</td>
+                  <td>Đại học SP Lịch sử</td>
+                  <td>Bậc 4</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Tổ phó Tổ Xã hội</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>NL.PH.26</td>
+                  <td><strong>Hoàng Thị Hồng</strong></td>
+                  <td>1987</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Địa lí</td>
+                  <td>Đại học SP Địa lí</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Giáo viên chủ nhiệm lớp</td>
+                </tr>
+                <tr>
+                  <td>27</td>
+                  <td>NL.PH.27</td>
+                  <td><strong>Nông Thị Biển</strong></td>
+                  <td>1990</td>
+                  <td>Tày</td>
+                  <td>Giáo viên Sinh học</td>
+                  <td>Đại học SP Sinh học</td>
+                  <td>Bậc 2</td>
+                  <td style="text-align: right;">1.470</td>
+                  <td>Bồi dưỡng HSG KHTN</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>28</td>
+                  <td>NL.PH.28</td>
+                  <td><strong>Bế Thị Điều</strong></td>
+                  <td>1985</td>
+                  <td>Tày</td>
+                  <td>Kế toán</td>
+                  <td>Đại học Tài chính KT</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Kế toán trưởng đơn vị</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>29</td>
+                  <td>NL.PH.29</td>
+                  <td><strong>Đàm Thu Hà</strong></td>
+                  <td>1988</td>
+                  <td>Nùng</td>
+                  <td>Văn thư</td>
+                  <td>Cao đẳng Văn thư lưu trữ</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Quản trị phần mềm iOffice</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>30</td>
+                  <td>NL.PH.30</td>
+                  <td><strong>Mông Thị Thu</strong></td>
+                  <td>1985</td>
+                  <td>Nùng</td>
+                  <td>Thư viện viên</td>
+                  <td>Đại học Thư viện</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Phụ trách kho sách SGK</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>31</td>
+                  <td>NL.PH.31</td>
+                  <td><strong>Nông Thị Hương</strong></td>
+                  <td>1984</td>
+                  <td>Tày</td>
+                  <td>Thiết bị, thí nghiệm</td>
+                  <td>CĐ Sư phạm Kỹ thuật</td>
+                  <td>Bậc 3</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Phụ trách kho đồ dùng thí nghiệm</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>32</td>
+                  <td>NL.PH.32</td>
+                  <td><strong>Nông Văn Kiên (HĐ)</strong></td>
+                  <td>1992</td>
+                  <td>Tày</td>
+                  <td>Y tế trường học</td>
+                  <td>Cao đẳng Y tế</td>
+                  <td>Bậc 1</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Chăm sóc sức khỏe, sơ cấp cứu</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>33</td>
+                  <td>NL.PH.33</td>
+                  <td><strong>Nông Thị Lan (HĐ)</strong></td>
+                  <td>1993</td>
+                  <td>Nùng</td>
+                  <td>Giáo vụ trường học</td>
+                  <td>Cao đẳng Sư phạm</td>
+                  <td>Bậc 1</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Hỗ trợ giáo vụ và nề nếp</td>
+                </tr>
+                <tr style="background:#fefce8;">
+                  <td>34</td>
+                  <td>NL.PH.34</td>
+                  <td><strong>Đàm Quang Long</strong></td>
+                  <td>1978</td>
+                  <td>Tày</td>
+                  <td>Bảo vệ trường học</td>
+                  <td>Trung cấp</td>
+                  <td>HĐ 111</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Trực bảo vệ an ninh 24/24</td>
+                </tr>
+                <tr style="background:#fefce8;">
+                  <td>35</td>
+                  <td>NL.PH.35</td>
+                  <td><strong>Lý Thị Mỵ</strong></td>
+                  <td>1982</td>
+                  <td>Tày</td>
+                  <td>Phục vụ / Tạp vụ</td>
+                  <td>Sơ cấp</td>
+                  <td>HĐ 111</td>
+                  <td style="text-align: right;">1.904</td>
+                  <td>Vệ sinh khuôn viên, cảnh quan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ==================== SUB-PANE D2 ==================== -->
+        <div class="sub-pane" id="sub-d2">
+          <div class="filter-bar">
+            <span class="badge badge-navy">Phương án bố trí và biên chế giai đoạn 2027 - 2031</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="table-d2">
+              <thead>
+                <tr>
+                  <th>Mã VTVL</th>
+                  <th>Nhóm vị trí / Đơn vị</th>
+                  <th>Năm</th>
+                  <th style="text-align: right;">Số người cần</th>
+                  <th style="text-align: right;">Biên chế hiện có</th>
+                  <th style="text-align: right;">Điều chỉnh (+/-)</th>
+                  <th>Hình thức tuyển dụng / Bố trí</th>
+                  <th>Nguồn kinh phí</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>VTVL.QL</strong></td>
+                  <td>Lãnh đạo Quản lý (Hiệu trưởng & 02 Phó HT)</td>
+                  <td>2027</td>
+                  <td style="text-align: right;">3</td>
+                  <td style="text-align: right;">3</td>
+                  <td style="text-align: right;">0</td>
+                  <td>Giữ nguyên, hoàn thiện quy hoạch đào tạo</td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.GV</strong></td>
+                  <td>Giáo viên trực tiếp giảng dạy (15 lớp)</td>
+                  <td>2027</td>
+                  <td style="text-align: right;">26</td>
+                  <td style="text-align: right;">24</td>
+                  <td style="text-align: right; color:#059669; font-weight:700;">+2</td>
+                  <td>Tuyển dụng mới 02 GV (Ngữ văn, Tiếng Anh)</td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.NV</strong></td>
+                  <td>Nhân viên hỗ trợ, phục vụ</td>
+                  <td>2027</td>
+                  <td style="text-align: right;">6</td>
+                  <td style="text-align: right;">6</td>
+                  <td style="text-align: right;">0</td>
+                  <td>Ổn định 06 vị trí theo Thông tư 20/2023</td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.HD</strong></td>
+                  <td>Hợp đồng lao động Nghị định 111/2022</td>
+                  <td>2027</td>
+                  <td style="text-align: right;">2</td>
+                  <td style="text-align: right;">2</td>
+                  <td style="text-align: right;">0</td>
+                  <td>Tiếp tục ký HĐLĐ (01 Bảo vệ + 01 Phục vụ)</td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr class="row-highlight">
+                  <td><strong>VTVL.TONG</strong></td>
+                  <td><strong>Tổng toàn trường năm 2027</strong></td>
+                  <td><strong>2027</strong></td>
+                  <td style="text-align: right;"><strong>37</strong></td>
+                  <td style="text-align: right;"><strong>35</strong></td>
+                  <td style="text-align: right; color:#059669; font-weight:800;">+2</td>
+                  <td><strong>Đề xuất giao 35 BC Viên chức + 02 HĐ 111</strong></td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.TONG</strong></td>
+                  <td>Tổng toàn trường năm 2028 (Quy mô 15 lớp)</td>
+                  <td>2028</td>
+                  <td style="text-align: right;">37</td>
+                  <td style="text-align: right;">37</td>
+                  <td style="text-align: right;">0</td>
+                  <td>Duy trì ổn định biên chế đã giao</td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr class="row-highlight">
+                  <td><strong>VTVL.TONG</strong></td>
+                  <td><strong>Tổng toàn trường năm 2029 (Tăng lên 16 lớp)</strong></td>
+                  <td><strong>2029</strong></td>
+                  <td style="text-align: right;"><strong>39</strong></td>
+                  <td style="text-align: right;"><strong>37</strong></td>
+                  <td style="text-align: right; color:#059669; font-weight:800;">+2</td>
+                  <td><strong>Tuyển bổ sung 02 GV (Toán, Tin học/CN)</strong></td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.TONG</strong></td>
+                  <td>Tổng toàn trường năm 2030 (Quy mô 16 lớp)</td>
+                  <td>2030</td>
+                  <td style="text-align: right;">39</td>
+                  <td style="text-align: right;">39</td>
+                  <td style="text-align: right;">0</td>
+                  <td>Duy trì ổn định 37 BC Viên chức + 02 HĐ 111</td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VTVL.TONG</strong></td>
+                  <td>Tổng toàn trường năm 2031 (Ổn định chuẩn QG)</td>
+                  <td>2031</td>
+                  <td style="text-align: right;">39</td>
+                  <td style="text-align: right;">39</td>
+                  <td style="text-align: right;">0</td>
+                  <td>Bộ máy hoàn chỉnh, 100% đạt chuẩn và trên chuẩn</td>
+                  <td>Ngân sách NN</td>
+                  <td><span class="badge-status badge-dat">ĐẠT</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==============================================
+         TAB 3: CÔNG CỤ MÔ PHỎNG & TÍNH TOÁN BIÊN CHẾ
+         ============================================== -->
+    <div class="tab-pane" id="tab-simulator">
+      <div class="content-card">
+        <div class="card-title-row">
+          <div class="card-title-left">
+            <h2><i class="fa-solid fa-calculator text-primary"></i> Công Cụ Tính Toán & Mô Phỏng Nhu Cầu Nhân Lực</h2>
+            <p>Tự động tính định mức theo Thông tư 20/2023/TT-BGDĐT và phương pháp quy đổi FTE của Hướng dẫn 07-HD/BTCTW</p>
+          </div>
+          <button class="btn btn-sm btn-outline" onclick="initSimulator()">
+            <i class="fa-solid fa-arrows-rotate"></i> Đặt lại mặc định
+          </button>
+        </div>
+
+        <div class="simulator-grid">
+          <!-- Controls Panel -->
+          <div class="simulator-controls">
+            <h3 style="font-size: 15px; font-weight: 700; color: var(--primary-navy); margin-bottom: 16px;">
+              <i class="fa-solid fa-sliders text-teal"></i> Tham Số Quy Mô Trường
+            </h3>
+
+            <div class="control-group">
+              <div class="control-label">
+                <span>Quy mô số lớp:</span>
+                <span class="control-value" id="sim-class-val">14 lớp</span>
+              </div>
+              <input type="range" class="slider-input" id="sim-class-slider" min="10" max="20" step="1" value="14">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-light); margin-top: 4px;">
+                <span>10 lớp</span>
+                <span>14 lớp (hiện tại)</span>
+                <span>20 lớp</span>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">
+                <span>Phân vùng trường (Thông tư 20/2023):</span>
+              </label>
+              <select class="filter-select" id="sim-region-select" style="width: 100%;">
+                <option value="2.45" selected>Vùng 1: Xã biên giới, đặc biệt khó khăn (Tối đa 2.45 GV/lớp)</option>
+                <option value="2.25">Vùng 2: Xã trung du, nông thôn (Tối đa 2.25 GV/lớp)</option>
+                <option value="2.0">Vùng 3: Đô thị, thành phố (Tối đa 2.0 GV/lớp)</option>
+              </select>
+            </div>
+
+            <div style="background: white; padding: 14px; border-radius: var(--radius-md); font-size: 12.5px; border: 1px solid var(--border-light); line-height: 1.6;">
+              <p><strong>Cơ sở tính toán:</strong></p>
+              <p>• Định mức THPT Vùng 1: <strong>2,45 GV/lớp</strong>.</p>
+              <p>• Lãnh đạo quản lý: <strong>1 HT + 2 PHT</strong> (trường từ 10-17 lớp).</p>
+              <p>• Nhân viên hỗ trợ: <strong>6 vị trí</strong> (KT, VT, TBTN, TV, YT, GVU).</p>
+              <p>• Hợp đồng 111: <strong>2 người</strong> (Bảo vệ + Tạp vụ).</p>
+              <p>• Quỹ giờ chuẩn PP2: <strong>1.470h</strong> (GV) & <strong>1.904h</strong> (Hành chính).</p>
+            </div>
+          </div>
+
+          <!-- Results Panel -->
+          <div>
+            <h3 style="font-size: 15px; font-weight: 700; color: var(--primary-navy); margin-bottom: 16px;">
+              <i class="fa-solid fa-square-poll-vertical text-teal"></i> Kết Quả Nhu Cầu Nhân Lực & Định Mức Tự Động
+            </h3>
+
+            <div class="simulator-results">
+              <div class="sim-result-card">
+                <div class="sim-result-title">Quy mô học sinh (ước tính)</div>
+                <div class="sim-result-num" id="sim-students-res">573 HS</div>
+                <div class="sim-result-desc">Bình quân 41 học sinh/lớp</div>
+              </div>
+
+              <div class="sim-result-card">
+                <div class="sim-result-title">Giáo viên định mức (TT 20)</div>
+                <div class="sim-result-num" style="color: var(--primary-teal);" id="sim-gv-quota-res">34.3 GV</div>
+                <div class="sim-result-desc">Tỷ lệ tối đa 2.45 GV/lớp</div>
+              </div>
+
+              <div class="sim-result-card">
+                <div class="sim-result-title">Lao động quy đổi (PP2)</div>
+                <div class="sim-result-num" style="color: #7c3aed;" id="sim-fte-res">37.99 người</div>
+                <div class="sim-result-desc">Dựa trên quỹ giờ ròng công việc</div>
+              </div>
+
+              <div class="sim-result-card">
+                <div class="sim-result-title">Tổng nhân lực cần bố trí</div>
+                <div class="sim-result-num" style="color: #059669;" id="sim-total-staff-res">37 người</div>
+                <div class="sim-result-desc">Gồm cả viên chức và HĐ 111</div>
+              </div>
+            </div>
+
+            <!-- Detailed Analysis Box -->
+            <div style="background: var(--bg-card-subtle); border-radius: var(--radius-lg); padding: 20px; border: 1px solid var(--border-light);">
+              <h4 style="font-size: 14.5px; font-weight: 700; color: var(--primary-navy); margin-bottom: 10px;">
+                Đề Xuất Chỉ Tiêu Biên Chế & Điều Chỉnh:
+              </h4>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px;">
+                <div style="background: white; padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+                  <div style="font-size: 12px; color: var(--text-muted);">Biên chế viên chức đề nghị cấp:</div>
+                  <div style="font-size: 22px; font-weight: 800; color: var(--primary-navy);" id="sim-vc-staff-res">35 biên chế</div>
+                </div>
+                <div style="background: white; padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+                  <div style="font-size: 12px; color: var(--text-muted);">So với biên chế hiện có (35):</div>
+                  <div style="font-size: 16px; margin-top: 4px;" id="sim-diff-res">Bằng đúng biên chế hiện có (35 người)</div>
+                </div>
+              </div>
+              <p style="font-size: 13px; color: var(--text-main); line-height: 1.6;">
+                <strong>Ghi chú nguyên tắc Hướng dẫn 07:</strong> Số người quy đổi PP2 không tự động làm tròn cơ học thành chỉ tiêu biên chế mà phải xem xét kết hợp PP1 (định mức cơ cấu trường lớp) và PP3 (tính chất chuyên sâu của từng môn học văn hóa bắt buộc và môn lựa chọn tổ hợp).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         TAB 4: CĂN CỨ PHÁP LÝ & CHỈ ĐẠO
+         ============================================== -->
+    <div class="tab-pane" id="tab-legal">
+      <div class="content-card">
+        <div class="card-title-row">
+          <div class="card-title-left">
+            <h2><i class="fa-solid fa-landmark text-primary"></i> Hệ Thống Văn Bản Pháp Lý & Hướng Dẫn</h2>
+            <p>Hồ sơ pháp lý đầy đủ phục vụ công tác rà soát VTVL và phương án biên chế giai đoạn 2027-2031</p>
+          </div>
+        </div>
+
+        <div class="legal-accordion">
+          <!-- Item 1 -->
+          <div class="accordion-item open">
+            <div class="accordion-header">
+              <h3><i class="fa-solid fa-file-pdf text-red"></i> Công văn Sở GD&ĐT Cao Bằng ngày 27/10/2026</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p><strong>Cơ quan ban hành:</strong> Sở Giáo dục và Đào tạo tỉnh Cao Bằng (Giám đốc Đàm Thị Trung Thu ký).</p>
+              <p><strong>Nội dung trọng tâm:</strong> Triển khai Kế hoạch số 201-KH/TU ngày 23/10/2026 của Tỉnh ủy và Hướng dẫn số 07-HD/BTCTW của Ban Tổ chức Trung ương. Yêu cầu các đơn vị thuộc, trực thuộc Sở:</p>
+              <ul style="padding-left: 20px; margin: 8px 0;">
+                <li>Xác định nhu cầu nhân lực độc lập với số biên chế hiện có; không lấy biên chế hiện có để hợp thức hóa nhu cầu.</li>
+                <li>Đánh giá đầy đủ tác động của chuyển đổi số, công nghệ, tự chủ và thuê dịch vụ.</li>
+                <li>Hoàn thiện đầy đủ bộ biểu mẫu nghiệp vụ A1-D2, báo cáo kết quả và hồ sơ minh chứng gửi về Sở GD&ĐT <strong>ngày 30/10/2026</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3><i class="fa-solid fa-file-pdf text-red"></i> Hướng dẫn số 07-HD/BTCTW ngày 19/10/2026 của Ban Tổ chức Trung ương</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p><strong>Cơ quan ban hành:</strong> Ban Tổ chức Trung ương.</p>
+              <p><strong>Nguyên tắc cốt lõi:</strong> RÕ VIỆC • ĐÚNG CÁCH TÍNH • ĐỦ CĂN CỨ • KHÔNG TÍNH TRÙNG.</p>
+              <p><strong>Quy trình 08 bước:</strong> (1) Rà soát nhiệm vụ A1; (2) Phân rã công việc A2; (3) Đo khối lượng B1; (4) Đánh giá thay đổi B2; (5) Hoàn thiện VTVL C1; (6) Khung năng lực C2; (7) Xác định nhu cầu C3; (8) Phương án biên chế 5 năm D2.</p>
+              <p><strong>Kỳ thống kê chuẩn:</strong> 12 tháng (01/10/2025 đến 30/9/2026); thời điểm chốt nhân lực: 30/9/2026.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3><i class="fa-solid fa-file-pdf text-red"></i> Thông tư số 20/2023/TT-BGDĐT ngày 30/10/2023 của Bộ GD&ĐT</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p><strong>Nội dung:</strong> Hướng dẫn về vị trí việc làm, cơ cấu viên chức theo chức danh nghề nghiệp và định mức số lượng người làm việc trong các cơ sở giáo dục phổ thông công lập.</p>
+              <p><strong>Quy định đối với cấp THPT:</strong></p>
+              <ul style="padding-left: 20px; margin: 8px 0;">
+                <li>Vùng 1 (xã biên giới, đặc biệt khó khăn): Bố trí tối đa <strong>2,45 giáo viên/lớp</strong>.</li>
+                <li>Lãnh đạo: 01 Hiệu trưởng; trường từ 10 đến 17 lớp được bố trí tối đa <strong>02 Phó Hiệu trưởng</strong>.</li>
+                <li>Vị trí việc làm hỗ trợ: Kế toán (1), Văn thư (1), Thủ quỹ (kiêm nhiệm), Thiết bị thí nghiệm (1), Thư viện (1), Y tế trường học (1), Giáo vụ (1).</li>
+                <li>Vị trí phục vụ, bảo vệ: Thực hiện hợp đồng lao động theo Nghị định 111/2022/NĐ-CP.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3><i class="fa-solid fa-file-pdf text-red"></i> Kết luận số 107-KL/TW ngày 17/10/2026 của Bộ Chính trị</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Kết luận của Bộ Chính trị về tiếp tục hoàn thiện hệ thống vị trí việc làm và biên chế trong toàn hệ thống chính trị giai đoạn 2027-2031, chấm dứt việc giao biên chế bình quân cơ học; gắn giao biên chế với sản phẩm đầu ra và mức độ ứng dụng công nghệ số.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         TAB 5: TRUNG TÂM TẢI VỀ & ĐỒNG BỘ
+         ============================================== -->
+    <div class="tab-pane" id="tab-downloads">
+      <div class="content-card">
+        <div class="card-title-row">
+          <div class="card-title-left">
+            <h2><i class="fa-solid fa-cloud-arrow-down text-primary"></i> Trung Tâm Tải Về Tài Liệu & Đồng Bộ Dự Án</h2>
+            <p>Tải trực tiếp bản Word và Excel hoàn chỉnh đã điền đầy đủ dữ liệu trường THPT Phục Hòa</p>
+          </div>
+        </div>
+
+        <div class="download-card-grid">
+          <!-- Excel Download Card -->
+          <div class="download-card">
+            <div>
+              <div class="download-card-header">
+                <div class="download-icon icon-excel">
+                  <i class="fa-solid fa-file-excel"></i>
+                </div>
+                <div class="download-info">
+                  <h3>Bộ Biểu Mẫu Excel Nghiệp Vụ</h3>
+                  <p>Trọn bộ 10 Sheet theo Hướng dẫn 07-HD/BTCTW</p>
+                </div>
+              </div>
+              <div class="download-specs">
+                <div class="download-specs-row">
+                  <span>Định dạng:</span>
+                  <strong>Microsoft Excel (.xlsx)</strong>
+                </div>
+                <div class="download-specs-row">
+                  <span>Số Sheet:</span>
+                  <strong>10 Sheet hoàn chỉnh (A1 - D2)</strong>
+                </div>
+                <div class="download-specs-row">
+                  <span>Trạng thái:</span>
+                  <strong style="color:#059669;">Đã nạp đủ dữ liệu THPT Phục Hòa</strong>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-excel" style="width: 100%; justify-content: center;" onclick="downloadFile('excel')">
+              <i class="fa-solid fa-download"></i> Tải Xuống File Excel (.xlsx)
+            </button>
+          </div>
+
+          <!-- Word Download Card -->
+          <div class="download-card">
+            <div>
+              <div class="download-card-header">
+                <div class="download-icon icon-word">
+                  <i class="fa-solid fa-file-word"></i>
+                </div>
+                <div class="download-info">
+                  <h3>Đề Án & Tờ Trình Đầy Đủ</h3>
+                  <p>Bản thuyết minh chi tiết 4 phần chuẩn thể thức NĐ 30</p>
+                </div>
+              </div>
+              <div class="download-specs">
+                <div class="download-specs-row">
+                  <span>Định dạng:</span>
+                  <strong>Microsoft Word (.docx)</strong>
+                </div>
+                <div class="download-specs-row">
+                  <span>Nội dung:</span>
+                  <strong>Tờ trình số 26 + Đề án chi tiết</strong>
+                </div>
+                <div class="download-specs-row">
+                  <span>Ký duyệt:</span>
+                  <strong style="color:#059669;">Hiệu trưởng Hoàng Trung Kiên</strong>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-word" style="width: 100%; justify-content: center;" onclick="downloadFile('word')">
+              <i class="fa-solid fa-download"></i> Tải Xuống File Word (.docx)
+            </button>
+          </div>
+
+          <!-- Direct Desktop Folder Card -->
+          <div class="download-card">
+            <div>
+              <div class="download-card-header">
+                <div class="download-icon icon-pdf">
+                  <i class="fa-solid fa-desktop"></i>
+                </div>
+                <div class="download-info">
+                  <h3>Đã Lưu Sẵn Trên Desktop</h3>
+                  <p>Hai tệp tin đã được tạo tự động trên màn hình máy tính</p>
+                </div>
+              </div>
+              <div class="download-specs">
+                <div class="download-specs-row">
+                  <span>Đường dẫn Excel:</span>
+                  <span style="font-size:11px; word-break:break-all;">D:\Desktop\Bo-Bieu...xlsx</span>
+                </div>
+                <div class="download-specs-row">
+                  <span>Đường dẫn Word:</span>
+                  <span style="font-size:11px; word-break:break-all;">D:\Desktop\De-An...docx</span>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="alert('File đã được lưu sẵn trên màn hình máy tính tại: D:\\Desktop\\!')">
+              <i class="fa-solid fa-folder-open"></i> Xem Vị Trí Trên Desktop
+            </button>
+          </div>
+        </div>
+
+        <!-- GitHub & Vercel Sync Info -->
+        <div style="margin-top: 32px; background: var(--bg-card-subtle); border-radius: var(--radius-xl); padding: 24px; border: 1px solid var(--border-light);">
+          <h3 style="font-size: 16px; font-weight: 700; color: var(--primary-navy); margin-bottom: 12px;">
+            <i class="fa-brands fa-github text-primary"></i> Trạng Thái Triển Khai GitHub & Vercel
+          </h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">
+            Dự án được đồng bộ tự động với tài khoản GitHub <strong>hoptin8686-design</strong> và triển khai tức thì lên nền tảng đám mây Vercel.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="https://github.com/hoptin8686-design" target="_blank" class="btn btn-github">
+              <i class="fa-brands fa-github"></i> Truy cập Kho GitHub
+            </a>
+            <a href="https://vercel.com" target="_blank" class="btn btn-outline">
+              <i class="fa-solid fa-cloud"></i> Quản trị Vercel Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>TRƯỜNG TRUNG HỌC PHỔ THÔNG PHỤC HÒA</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Thị trấn Phục Hòa, huyện Quảng Hòa, tỉnh Cao Bằng</p>
+        <p><i class="fa-solid fa-envelope"></i> c3phuchoa.caobang@moet.edu.vn | kienbangca.hl@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> Điện thoại Hiệu trưởng: 0948.169.659</p>
+      </div>
+      <div class="footer-col">
+        <h4>CĂN CỨ VĂN BẢN</h4>
+        <ul class="footer-links">
+          <li><a href="#tab-legal"><i class="fa-solid fa-chevron-right"></i> Hướng dẫn 07-HD/BTCTW</a></li>
+          <li><a href="#tab-legal"><i class="fa-solid fa-chevron-right"></i> Thông tư 20/2023/TT-BGDĐT</a></li>
+          <li><a href="#tab-legal"><i class="fa-solid fa-chevron-right"></i> Nghị định 232/2026/NĐ-CP</a></li>
+          <li><a href="#tab-legal"><i class="fa-solid fa-chevron-right"></i> CV Sở GD&ĐT Cao Bằng 27/10/2026</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>HỆ THỐNG TRỰC TUYẾN</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:downloadFile('excel')"><i class="fa-solid fa-file-excel"></i> Bộ biểu Excel chuẩn</a></li>
+          <li><a href="javascript:downloadFile('word')"><i class="fa-solid fa-file-word"></i> Đề án & Tờ trình Word</a></li>
+          <li><a href="https://github.com/hoptin8686-design" target="_blank"><i class="fa-brands fa-github"></i> GitHub Repository</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Trường THPT Phục Hòa - Tỉnh Cao Bằng. Bản quyền thuộc về Trường THPT Phục Hòa.</div>
+      <div>Xây dựng theo Hướng dẫn 07-HD/BTCTW và Hướng dẫn Sở GD&ĐT tỉnh Cao Bằng.</div>
+    </div>
+  </footer>
+
+  <!-- Main App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
